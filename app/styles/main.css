@@ -368,14 +368,21 @@ main {
   src: url(/fonts/RobotoCondensed-BoldItalic.eot);
   src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url(/fonts/RobotoCondensed-BoldItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-BoldItalic.woff) format('woff');
 }
+
+/* New Styles */
 .showcase {
-padding-bottom: 7px;     
+padding-bottom: 8px;     
 }
 
-#bottom {
-text-align: center;
+/* Footer */
+#bottom p {
+    text-align: center;
+    font-size: 1em;
+    padding-bottom: 5px;
+    padding-top: 10px;
 }
 
+/* Highlight Navigation Items */
 .menuHighlight:hover img,
 .menuHighlight img:hover { 
 	padding-bottom: 2px;
@@ -384,5 +391,12 @@ text-align: center;
 .active { 
 	padding-bottom: 2px;
 	border-bottom: 3px solid red; 
+}
+
+/* Center Instagram iframe widget inside containing div */
+div.instacenter iframe{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
