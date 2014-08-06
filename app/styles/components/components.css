@@ -2603,12 +2603,11 @@ ol.list-links.list-links--secondary a::before {
 *
 **/
 a {
-  color: #ff4c4c;
-  text-decoration: none;
+  color: #ff4c4c;   
+   text-decoration: none;    
 }
 
 a:hover {
-  color: #c00;    
   text-decoration: none;
 }
 
