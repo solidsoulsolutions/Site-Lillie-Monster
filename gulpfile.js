@@ -119,7 +119,6 @@ gulp.task('styles', ['styles:components', 'styles:scss', 'styles:css']);
 gulp.task('html', function () {
   return gulp.src('app/**/*.html')
     .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
-  
     // Concatenate And Minify JavaScript
     .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
     // Remove Any Unused CSS
