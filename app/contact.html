@@ -74,13 +74,68 @@
 
     <!-- Contact Page Content -->  
     <main>
-        Content Here    
+        <!-- Header & Short Blurb -->
+        <div>
+            <img src="images/Lillie-Monster-Logo-Web.png" alt="Lillie Monster-Logo" class="logoHeader">
+            <h1>CONTACT</h1>
+            <p>Please use the form below for booking and all other inquiries.</p>  
+        </div>
+        <!-- Contact Form -->
+        <div>
+            <form method="post" id="contact-monster">
+                <fieldset>
+                    <legend>ABOUT YOU</legend>
+                    
+                    <label for="name">NAME</label>
+                    <input type="text" id="name" maxlength="100" name="name" placeholder="John Smith" required autocomplete="name" autofocus>
+                    
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email" placeholder="neo@example.com" required autocomplete="email" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$">
+                    
+                    <label for="tel">PHONE</label>
+                    <input type="tel" id="tel" maxlength="15" name="phone" placeholder="(555) 555 5555" autocomplete="tel">
+                    
+                    <label for="url">WEB</label>
+                    <input type="url" id="url" name="website" placeholder="http://" pattern="^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$">
+                </fieldset>
+                
+                <fieldset>
+                    <legend>MESSAGE THE MONSTER</legend>
+                    
+                             <label id="highlight-form-item">Reason for Contact</label>
+                    
+                    <input type="radio" id="booking_inquiry" value="booking_inquiry" name="contact_reason">
+                    <label for="booking_inquiry" class="form-layout-fix">Booking Inquiry</label>
+                    
+                    <input type="radio" id="issue" value="issue" name="contact_reason">
+                    <label for="issue" class="form-layout-fix">Website/Webstore Issue</label>
+                    
+                    <input type="radio" id="fan_mail" value="fan_mail" name="contact_reason">
+                    <label for="fan_mail" class="form-layout-fix">Fan Mail</label>
+                    
+                    <input type="radio" id="other" value="other" name="contact_reason">
+                    <label for="other" class="form-layout-fix">Other</label>
+                    <div id="message-monster">
+                    <label for="subject">SUBJECT</label>
+                    <input type="text" id="subject" maxlength="135" name="subject" required>
+                    
+           
+                    
+                    
+                    <label for="message">MESSAGE</label>
+                    <textarea id="message" name="message" required></textarea>
+                </fieldset>
+                
+                <input type="submit" value="SEND">
+                </div>    
+            </form>
+        </div>
     </main>
       
     <!-- Footer -->  
     <footer class="bottom">
         <div>
-        &copy; 2014-2015 <a href="http://www.lilliemonster.com/">LILLIE MONSTER</a> 
+            &copy; 2014-2015 <a href="http://www.lilliemonster.com/">LILLIE MONSTER</a> 
         </div>
     </footer>
       

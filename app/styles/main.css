@@ -222,7 +222,30 @@ main {
 }
 
 
+/* Style Guide */
 
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+body, p {
+    font-family: 'Varela', sans-serif;
+    font-size: 1em;
+}
+
+p {
+    padding-top: 10px; 
+    padding-bottom: 10px;
+}
+
+.logoHeader {
+    padding-left: 3px;
+}
 
 /* Fonts & Icons */
 
@@ -558,4 +581,56 @@ div.instacenter iframe {
     margin-top: 0;
   }      
     
+}
+
+/*** Contact Page ***/
+
+#contact-monster {
+    background-color: rgba(255, 76, 76, 0.7);
+    padding: 1em;
+}
+
+#contact-monster legend {
+    font-weight: bold;
+    color: #fff;
+}
+
+#contact-monster label {
+    display: block;
+}
+
+input[type=radio] { 
+    float:left; 
+    clear:none;
+    margin-top: 6px;
+    margin-right: 2px;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=url], input[type=submit], textarea { width: 100%; }
+
+input:hover, input:active, input:focus, textarea:hover, textarea:active, textarea:focus {
+outline-color: #f00;
+}
+
+fieldset {
+padding-bottom: 25px;
+}
+
+input[type=submit] {
+    color: #ffffff;
+    background-color: rgba(204, 0, 0, 0.6);
+    border: none;
+    padding: 10px;
+}
+
+textarea {
+    height: 150px;
+}
+
+#message-monster {
+    margin-top: 10px;
+}
+
+#highlight-form-item {
+    font-weight: bold;
 }
