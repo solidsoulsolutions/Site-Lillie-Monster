@@ -73,7 +73,7 @@
     </nav>
 
     <!-- Contact Page Content -->  
-    <main>
+    <main class="contact-layout">
         <!-- Header & Short Blurb -->
         <div>
             <img src="images/Lillie-Monster-Logo-Web.png" alt="Lillie Monster-Logo" class="logoHeader">
@@ -81,7 +81,7 @@
             <p>Please use the form below for booking and all other inquiries.</p>  
         </div>
         <!-- Contact Form -->
-        <div>
+        
             <form method="post" id="contact-monster">
                 <fieldset>
                     <legend>ABOUT YOU</legend>
@@ -102,7 +102,8 @@
                 <fieldset>
                     <legend>MESSAGE THE MONSTER</legend>
                     
-                             <label id="highlight-form-item">Reason for Contact</label>
+                    
+                    <label id="highlight-form-item">Reason for Contact</label>
                     
                     <input type="radio" id="booking_inquiry" value="booking_inquiry" name="contact_reason">
                     <label for="booking_inquiry" class="form-layout-fix">Booking Inquiry</label>
@@ -115,12 +116,11 @@
                     
                     <input type="radio" id="other" value="other" name="contact_reason">
                     <label for="other" class="form-layout-fix">Other</label>
-                    <div id="message-monster">
+                    
+                    
+                    <div id="message-monster">  
                     <label for="subject">SUBJECT</label>
                     <input type="text" id="subject" maxlength="135" name="subject" required>
-                    
-           
-                    
                     
                     <label for="message">MESSAGE</label>
                     <textarea id="message" name="message" required></textarea>
@@ -129,7 +129,7 @@
                 <input type="submit" value="SEND">
                 </div>    
             </form>
-        </div>
+        
     </main>
       
     <!-- Footer -->  
@@ -140,6 +140,7 @@
     </footer>
       
     <!-- build:js scripts/main.min.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>  
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
