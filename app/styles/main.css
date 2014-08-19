@@ -295,6 +295,13 @@ p {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-uniE603:before {
+	content: "\e603";
+}
+.icon-uniE604:before {
+	content: "\e604";
+}
 .icon-facebook:before {
 	content: "\e600";
 }
@@ -304,7 +311,27 @@ p {
 .icon-twitter:before {
 	content: "\e602";
 }
+.icon-uniE605:before {
+	content: "\e605";
+}
+.icon-uniE606:before {
+	content: "\e606";
+}
+.icon-uniE607:before {
+	content: "\e607";
+}
+.icon-uniE608:before {
+	content: "\e608";
+}
+.icon-uniE609:before {
+	content: "\e609";
+}
 
+/* Fix bullets on li items from components file */
+
+ul li::before {
+    display: none;
+}
 /* Highlight Navigation Items */
 
 .menuHighlight:hover img,
@@ -345,11 +372,11 @@ p {
 }
 
 .bottom a:hover {
-    color: #cc0000;
+    color: #ff0000;
 }
 
 .bottom a:active {
-    color: #cc0000;
+    color: #ff0000;
 }
 
 /*** Home Page ***/
@@ -397,13 +424,13 @@ div.fb-like {
 /*** Contact Page Narrow View ***/
 
 #contact-monster {
-    background-color: rgba(255, 76, 76, 0.7);
+    background-color: rgba(255, 76, 76, 0.2);
     padding: 1em;
 }
 
 #contact-monster legend {
     font-weight: bold;
-    color: #fff;
+    color: #000;
 }
 
 #contact-monster label {
@@ -429,7 +456,7 @@ padding-bottom: 25px;
 
 input[type=submit] {
     color: #ffffff;
-    background-color: rgba(204, 0, 0, 0.6);
+    background-color: rgba(255, 0, 0, 0.8);
     border: none;
     padding: 10px;
 }
@@ -444,6 +471,99 @@ textarea {
 
 #highlight-form-item {
     font-weight: bold;
+}
+
+/***Portfolio Page***/
+
+.portfolio-layout {
+    padding-bottom: 10px;
+}
+
+.gallery {
+    width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.gallery li {
+	float: left;
+	width: 100%;
+	margin: 2.5%;
+	background-color: rgba(255, 76, 76, 0.2);
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;    
+}
+
+
+.gallery li:hover {
+	background-color: rgb(255, 76, 76);
+}
+
+.gallery li:active {
+	background-color: rgb(255, 0, 0);
+}
+
+.gallery li a {
+    display: block;
+	width: 100%;
+    position: relative;
+    height: 0;
+    padding: 56.25% 0 0 0;
+    overflow: hidden;
+}
+
+.gallery li a img {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 1;
+    margin: auto;
+}
+
+
+.clear { clear: both; }
+
+
+.gallery-nav {
+    display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  border: none;   
+}
+
+.gallery-nav button {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    padding: 0px 20px;
+}
+
+.gallery-num {
+    color: #f00;
+}
+
+.gallery-nav button:hover, button:focus, button:active {
+    color: #f00;
+    outline: none;
+}
+
+.gallery-nav-fullscreen {
+    display: none;
+}
+
+/* Portfolio Narrow View */
+
+@media (min-width: 360px) {
+/** Portfolio Medium View **/
+.gallery li {
+    width: 45%;
+}
+    
 }
 
 /** Home Page Medium View **/
@@ -467,6 +587,7 @@ textarea {
         -webkit-order: 1;
         order: 1;
     }
+       
 }
 
 @media (min-width: 540px) {
@@ -479,6 +600,12 @@ input[type=submit] {
     display: block;
     margin: auto;
 }    
+    
+/*Portfolio Page- increase icons for gallery nav */
+    .icon-uniE603, .icon-uniE604, .icon-uniE605, .icon-uniE606, .icon-uniE607, .icon-uniE608, .icon-uniE609 {
+    font-size: 24px;
+}        
+    
 }
 
 
@@ -486,11 +613,13 @@ input[type=submit] {
     main {
         max-width: 600px;
     }
+    
 }
 
 @media all and (min-width: 990px) {
     
-/** Home Page Wide View **/        
+/** Home Page Wide View **/    
+    
 .c1 {
     width: 15%;
     -webkit-order: 1;
@@ -530,7 +659,47 @@ div.instacenter iframe {
     margin-left: 0;
     margin-right: auto;
 }
+
+/** Portfolio Page Wide Layout **/
     
+main.portfolio-layout {
+    max-width: 100%;
+    padding-top: 0px;
+}
+    
+.gallery li {
+    width: 28%;
+}    
+    
+.portfolio-header {
+    max-width: 827px;
+    margin: 0 auto;
+    padding: 0px 16px;
+} 
+ /* Hide small gallery nav */   
+.gallery-nav { display: none; }
+/* Show full screen expanded gallery nav */   
+.gallery-nav-fullscreen {
+    display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  border: none;   
+}
+
+.gallery-nav-fullscreen button {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    padding: 0px 20px;
+}
+
+.gallery-nav-fullscreen button:hover, button:focus, button:active {
+    color: #f00;
+    outline: none;
+}      
+   
+        
 /* Nav Fix for Wide Viewport */
 .navdrawer-container ul li:first-child {
     border-top-style: none;
@@ -538,7 +707,8 @@ div.instacenter iframe {
     
 .navdrawer-container ul li {
   margin: auto;
-}    
+} 
+    
     
 /*** Larger Screens - desktops and tablets ***/
   .app-bar {
