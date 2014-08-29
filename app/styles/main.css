@@ -1,7 +1,99 @@
-/* Multi- Screen Layout Styles - Main Stylesheet */
+/* Lillie Monster - Main Stylesheet */
 
-html,
-body {
+/********** GLOBAL **********/
+
+/*
+PALETTE:
+red       : #ff0000;
+light red : #ff4c4c;
+black     : #000000;
+dark grey : #404040;
+white     : #ffffff;
+*/
+
+/***** Fonts/Icons *****/
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 300;
+    src:url('../fonts/Raleway-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src:url('../fonts/Raleway-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Varela';
+    font-style: normal;
+    font-weight: 400;
+    src:url('../fonts/Varela-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?sqnzfn');
+	src:url('../fonts/icomoon.eot?#iefixsqnzfn') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?sqnzfn') format('woff'),
+		url('../fonts/icomoon.ttf?sqnzfn') format('truetype'),
+		url('../fonts/icomoon.svg?sqnzfn#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-uniE60A:before {
+	content: "\e60a";
+}
+.icon-uniE603:before {
+	content: "\e603";
+}
+.icon-uniE604:before {
+	content: "\e604";
+}
+.icon-facebook:before {
+	content: "\e600";
+}
+.icon-instagram:before {
+	content: "\e601";
+}
+.icon-twitter:before {
+	content: "\e602";
+}
+.icon-uniE605:before {
+	content: "\e605";
+}
+.icon-uniE606:before {
+	content: "\e606";
+}
+.icon-uniE607:before {
+	content: "\e607";
+}
+.icon-uniE608:before {
+	content: "\e608";
+}
+.icon-uniE609:before {
+	content: "\e609";
+}
+
+/***** General *****/
+html, body {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -10,13 +102,51 @@ body {
 
 body {
   position: relative;
-  font-family: 'Raleway', 'Helvetica', sans-serif;
   font-weight: 400;
   background-color: #FFFFFF;
   box-sizing: border-box;
   min-height: 100%;
 }
 
+p {
+    padding-top: 10px; 
+    padding-bottom: 10px;
+}
+
+body, p {
+    font-family: 'Varela', sans-serif;
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+ul, ol {
+  font-size: 19px;
+}
+
+/* Fix bullets on li items from components file */
+ul li::before {
+    display: none;
+}
+
+/* CSS Support */
+
+.clear { 
+    clear: both; 
+}
+
+
+/********** LAYOUT **********/
+
+
+/***** Navigation *****/
 body.open {
   overflow: hidden;
 }
@@ -135,10 +265,6 @@ button.menu img {
   backface-visibility: hidden;
 }
 
-.base, p, ul, ol {
-  font-size: 19px;
-}
-
 .navdrawer-container {
   z-index: 1;
   position: fixed;
@@ -221,119 +347,7 @@ main {
   min-height: 100%;
 }
 
-
-/* Style Guide */
-
-h1, h2, h3 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-}
-
-h1 {
-    font-size: 2em;
-}
-
-body, p {
-    font-family: 'Varela', sans-serif;
-    font-size: 1em;
-}
-
-p {
-    padding-top: 10px; 
-    padding-bottom: 10px;
-}
-
-.logoHeader {
-    padding-left: 3px;
-}
-
-/* Fonts & Icons */
-
-@font-face {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 300;
-    src:url('../fonts/Raleway-Light.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    src:url('../fonts/Raleway-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Varela';
-    font-style: normal;
-    font-weight: 400;
-    src:url('../fonts/Varela-Regular.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?sqnzfn');
-	src:url('../fonts/icomoon.eot?#iefixsqnzfn') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?sqnzfn') format('woff'),
-		url('../fonts/icomoon.ttf?sqnzfn') format('truetype'),
-		url('../fonts/icomoon.svg?sqnzfn#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-
-.icon-uniE603:before {
-	content: "\e603";
-}
-.icon-uniE604:before {
-	content: "\e604";
-}
-.icon-facebook:before {
-	content: "\e600";
-}
-.icon-instagram:before {
-	content: "\e601";
-}
-.icon-twitter:before {
-	content: "\e602";
-}
-.icon-uniE605:before {
-	content: "\e605";
-}
-.icon-uniE606:before {
-	content: "\e606";
-}
-.icon-uniE607:before {
-	content: "\e607";
-}
-.icon-uniE608:before {
-	content: "\e608";
-}
-.icon-uniE609:before {
-	content: "\e609";
-}
-
-/* Fix bullets on li items from components file */
-
-ul li::before {
-    display: none;
-}
 /* Highlight Navigation Items */
-
 .menuHighlight:hover img,
 .menuHighlight img:hover { 
 	padding-bottom: 2px;
@@ -350,8 +364,14 @@ ul li::before {
     border-top-color: #000;
 }
 
-/* Footer */
 
+/***** Header *****/
+.logoHeader {
+    padding-left: 3px;
+}
+
+
+/***** Footer *****/
 .bottom {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
@@ -379,14 +399,16 @@ ul li::before {
     color: #ff0000;
 }
 
-/*** Home Page ***/
+/********** CONTENT (MOBILE-FIRST) **********/
+
+
+/***** Home Page *****/
 
 .showcase {
     padding-bottom: 8px;     
 }
 
 /* Center Instagram iframe widget inside containing div */
-
 div.instacenter iframe {
     display: block;
     margin-left: auto;
@@ -394,7 +416,6 @@ div.instacenter iframe {
 }
 
 /* Center Facebook Like Box */
-
 div.fb-like {
     width: 100% !important; 
     position: relative;          
@@ -415,14 +436,13 @@ div.fb-like {
       flex-flow: row wrap;
 }
 
-/** Home Page Narrow View **/
-
-   .c1, .c2, .c3 {
+.c1, .c2, .c3 {
       width: 100%;
     }
 
-/*** Contact Page Narrow View ***/
+/***** Contact Page *****/
 
+/* Contact Form */
 #contact-monster {
     background-color: rgba(255, 76, 76, 0.2);
     padding: 1em;
@@ -473,12 +493,13 @@ textarea {
     font-weight: bold;
 }
 
-/***Portfolio Page***/
+/**** Portfolio Page ****/
 
 .portfolio-layout {
     padding-bottom: 10px;
 }
 
+/* Photo Gallery */
 .gallery {
     width: 100%;
 	margin: 0;
@@ -524,10 +545,7 @@ textarea {
     margin: auto;
 }
 
-
-.clear { clear: both; }
-
-
+/* Gallery Navigation */
 .gallery-nav {
     display: -webkit-flex;
   display: -ms-flexbox;
@@ -556,19 +574,57 @@ textarea {
     display: none;
 }
 
-/* Portfolio Narrow View */
+/***** Resume Page *****/
+
+.standout {
+    border-style: solid none;
+    border-width: thin;
+    border-color: rgba(255, 76, 76, 0.6);
+    padding: 0;
+}
+
+.resume-subject {
+    font-weight: bold;
+    color: #000;
+}
+
+.resume-layout {
+    padding-bottom: 10px;
+}
+
+.resume-layout div ul {
+    padding-top: 0;
+}
+.resume-layout div ul li {
+    font-size: 75%;
+    padding-left: 0;
+}
+
+.resume-highlight {
+    font-weight: bold;
+}
+
+#view-pdf {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+/*** Media Queries ***/
 
 @media (min-width: 360px) {
-/** Portfolio Medium View **/
-.gallery li {
-    width: 45%;
-}
+    /** Portfolio Page - Medium View **/
+    .gallery li {
+        width: 45%;
+    }
     
 }
 
-/** Home Page Medium View **/
 
 @media (min-width: 530px) {
+    /** Home Page - Medium View **/
     .c1 {
         width: 50%;    
         -webkit-order: 2;
@@ -590,26 +646,29 @@ textarea {
        
 }
 
+
 @media (min-width: 540px) {
+    /** Contact Page - Medium View **/
     main {
         max-width: 540px;
     }
     
-input[type=submit] { 
-    width: 60%; 
-    display: block;
-    margin: auto;
-}    
+    input[type=submit] { 
+        width: 60%; 
+        display: block;
+        margin: auto;
+    }    
     
-/*Portfolio Page- increase icons for gallery nav */
+    /** Portfolio Page - Medium View (increase icon size for gallery nav) **/
     .icon-uniE603, .icon-uniE604, .icon-uniE605, .icon-uniE606, .icon-uniE607, .icon-uniE608, .icon-uniE609 {
-    font-size: 24px;
-}        
+        font-size: 24px;
+    }        
     
 }
 
 
 @media (min-width: 830px) {
+    /** Contact Page - Medium/Wide View **/
     main {
         max-width: 600px;
     }
@@ -618,7 +677,13 @@ input[type=submit] {
 
 @media all and (min-width: 990px) {
     
-/** Home Page Wide View **/    
+/** Home Page - Wide View **/
+    
+ main.layout {
+    max-width: 100%;
+    padding-top: 0;
+    min-height: initial;
+  }
     
 .c1 {
     width: 15%;
@@ -660,7 +725,7 @@ div.instacenter iframe {
     margin-right: auto;
 }
 
-/** Portfolio Page Wide Layout **/
+/** Portfolio Page - Wide View **/
     
 main.portfolio-layout {
     max-width: 100%;
@@ -676,15 +741,19 @@ main.portfolio-layout {
     margin: 0 auto;
     padding: 0px 16px;
 } 
- /* Hide small gallery nav */   
-.gallery-nav { display: none; }
+
+/* Hide small gallery nav */   
+.gallery-nav { 
+    display: none; 
+}
+    
 /* Show full screen expanded gallery nav */   
 .gallery-nav-fullscreen {
     display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  border: none;   
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    border: none;   
 }
 
 .gallery-nav-fullscreen button {
@@ -699,18 +768,46 @@ main.portfolio-layout {
     outline: none;
 }      
    
-        
-/* Nav Fix for Wide Viewport */
-.navdrawer-container ul li:first-child {
-    border-top-style: none;
+/** Contact Page - Wide View **/
+
+main.contact-layout {
+    max-width: 827px;
+    padding-top: 0;
+    min-height: initial;
+ }
+
+input[type=text], input[type=email], input[type=tel], input[type=url], textarea { 
+    width: 80%; 
+}
+
+    input[type=submit] { 
+    width: 40%;
+    display: block;
+    margin: auto;
 }
     
-.navdrawer-container ul li {
-  margin: auto;
-} 
+fieldset {
+padding-left: 100px;
+}
+
     
+.form-layout-fix {
+    display: inline-block;
+    float: left;
+    padding-right: 30px;
+}
+
+#message-monster {
+    clear: left;
+    margin-top: 40px;
+}
     
-/*** Larger Screens - desktops and tablets ***/
+#message-monster input[type=text], textarea {
+    width: 90%;
+}
+    
+/** Navigation - Wide View **/
+
   .app-bar {
     position: relative;
   }
@@ -803,51 +900,15 @@ main.portfolio-layout {
     margin-top: 0;
   }
     
-    /* Layout Containers for Wide Viewports */    
-  main.layout {
-    max-width: 100%;
-    padding-top: 0;
-    min-height: initial;
-  }
-    
- main.contact-layout {
-    max-width: 827px;
-    padding-top: 0;
-    min-height: initial;
- }
-    
-/* Contact Page Wide Viewport */
+    /* Nav Fix for Wide Viewport */
+    .navdrawer-container ul li:first-child {
+        border-top-style: none;
+    }
 
-input[type=text], input[type=email], input[type=tel], input[type=url], textarea { 
-    width: 80%; 
-}
-
-    input[type=submit] { 
-    width: 40%;
-    display: block;
-    margin: auto;
-}
-    
-fieldset {
-padding-left: 100px;
-}
-
-    
-.form-layout-fix {
-    display: inline-block;
-    float: left;
-    padding-right: 30px;
-}
-
-#message-monster {
-    clear: left;
-    margin-top: 40px;
-}
-    
-#message-monster input[type=text], textarea {
-    width: 90%;
-}    
-    
+    .navdrawer-container ul li {
+      margin: auto;
+    }         
+   
 }
 
 
