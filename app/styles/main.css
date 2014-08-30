@@ -444,7 +444,7 @@ div.fb-like {
 
 /* Contact Form */
 #contact-monster {
-    background-color: rgba(255, 76, 76, 0.2);
+    background-color: rgba(255, 76, 76, 0.4);
     padding: 1em;
 }
 
@@ -579,7 +579,7 @@ textarea {
 .standout {
     border-style: solid none;
     border-width: thin;
-    border-color: rgba(255, 76, 76, 0.6);
+    border-color: rgba(255, 76, 76, 0.4);
     padding: 0;
 }
 
@@ -604,12 +604,28 @@ textarea {
     font-weight: bold;
 }
 
+.resume-link {
+    text-decoration: none;
+    color: #404040;
+}
+
+.resume-link:visited {
+    color: #404040;
+}
+
+.resume-link:hover {
+    color: #ff0000;
+}
+
+.resume-link:active {
+    color: #ff0000;
+}
+
 #view-pdf {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     text-align: center;
     font-size: 1em;
-    margin-top: 20px;
 }
 
 /*** Media Queries ***/
@@ -805,6 +821,29 @@ padding-left: 100px;
 #message-monster input[type=text], textarea {
     width: 90%;
 }
+
+/** Resume - Wide View **/ 
+    
+main.resume-layout {
+    max-width: 827px;
+    padding-top: 0;
+    min-height: initial;
+ }
+    
+#section1 {
+    float: left;
+    width: 60%;
+}
+    
+#section2 {
+    float: right;
+    width: 40%;
+}    
+    
+#section1 div ul, #section2 div ul {
+    padding-left: 0;
+}
+ 
     
 /** Navigation - Wide View **/
 
